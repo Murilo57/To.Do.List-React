@@ -1,6 +1,6 @@
  import {createFactory, useState} from 'react'
 
-const TodoForm = () => {
+const TodoForm = ({addAll}) => {
     const [value, setValue] = useState("")
     const [category, setCategory] = useState("")
      
@@ -8,6 +8,7 @@ const TodoForm = () => {
         e.preventDefault()
         if(!value || !category) return
         //Added all
+        addAll(value, category)
         //Clear the fields      
         setValue("")  
         setCategory("")

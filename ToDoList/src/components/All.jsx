@@ -1,6 +1,6 @@
 import React from 'react'
 
-function All( { all }) {
+function All( { all, removeTodo }) {
   return (
     <div className="all">
          <div className="content">
@@ -9,7 +9,7 @@ function All( { all }) {
          </div>
          <div>
            <button className="complete">To complete</button>
-           <button className="remove">X</button>
+           <button className="remove" onClick={() => removeTodo(all.id)}>X</button>
          </div>
          </div>
     )
