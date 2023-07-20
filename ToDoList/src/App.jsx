@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import Search from "./components/Search";
 import All from "./components/All";
 import TodoForm from './components/TodoForm';
 
@@ -49,6 +50,7 @@ function App() {
   return (
     <div className="app">
     <h1>To-Do List</h1>
+    <Search/>
       <div className="todo-list">
         {alls.map((all) => (
           <All key={all.id} all={all} removeTodo={removeTodo} completeTodo={completeTodo}/>
