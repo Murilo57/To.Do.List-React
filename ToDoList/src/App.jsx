@@ -40,13 +40,18 @@ function App() {
     setAll(filteredAlls)
   }
 
+  const completeTodo = (id) => {
+    const newAlls = [...alls]
+    newAlls.map((all) => all.id === id ? all.isCompleted = !all.isCompleted : all)
+    setAll(newAlls)
+  }
 
   return (
     <div className="app">
     <h1>To-Do List</h1>
       <div className="todo-list">
         {alls.map((all) => (
-          <All key={all.id} all={all} removeTodo={removeTodo}/>
+          <All key={all.id} all={all} removeTodo={removeTodo} completeTodo={completeTodo}/>
         ))}
       </div>
       <TodoForm addAll={addAll}/>
