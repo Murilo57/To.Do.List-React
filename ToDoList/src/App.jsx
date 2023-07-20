@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import All from "./components/All";
+import TodoForm from './components/TodoForm';
 
 function App() {
   const [alls, setAll] = useState([
@@ -26,6 +27,7 @@ function App() {
           <All all={all}/>
         ))}
       </div>
+      <TodoForm/>
     </div>
   )
 }

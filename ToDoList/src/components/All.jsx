@@ -8,8 +8,8 @@ function All( { all }) {
            <p className="category">({all.category})</p>
          </div>
          <div>
-           <button>To complete</button>
-           <button>X</button>
+           <button className="complete">To complete</button>
+           <button className="remove">X</button>
          </div>
          </div>
     )
